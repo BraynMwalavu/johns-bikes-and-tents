@@ -1,44 +1,67 @@
 import React from "react";
+import Button from "./Button";
 
 const FAQ = () => {
   const faqs = [
     {
-      question: "What is this platform about?",
+      question: "What services does John’s Bikes & Tents offer?",
       answer:
-        "This is a demo web app showcasing navigation, routing, and layout using React and React Router.",
+        "We provide high-quality bike rentals, tents, and camping gear for outdoor enthusiasts. Whether you’re exploring Naivasha or visiting Hell’s Gate National Park, we’ve got you covered.",
     },
     {
-      question: "How do I contact support?",
+      question: "Where are you located?",
       answer:
-        "You can reach out via the contact form on the Contact page, and our team will respond within 24 hours.",
+        "We’re based in Naivasha, near Fisherman’s Camp — just a short ride away from Hell’s Gate National Park.",
     },
     {
-      question: "Can I contribute or give feedback?",
+      question: "How can I make a booking or inquiry?",
       answer:
-        "Absolutely! We appreciate feedback and contributions to improve the app experience.",
+        "Simply visit our Contact page and fill out the form. John or our team will get back to you within 24 hours.",
+    },
+    {
+      question: "Do you provide helmets and safety gear?",
+      answer:
+        "Yes, helmets are available with every bike rental to ensure your safety and comfort during the ride.",
     },
   ];
 
   return (
-    <section className="p-8 max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
-        Frequently Asked Questions
-      </h1>
+    <main className="bg-primary text-neutral-dark py-20 px-6">
+      <section className="max-w-4xl mx-auto">
+        <h1 className="text-h1 font-heading text-center text-primary-dark mb-10">
+          Frequently Asked Questions
+        </h1>
 
-      <div className="space-y-6">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="border-b border-gray-200 pb-4 hover:bg-gray-50 p-4 rounded-lg transition"
-          >
-            <h2 className="text-lg font-semibold text-gray-700 mb-2">
-              {faq.question}
-            </h2>
-            <p className="text-gray-600">{faq.answer}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+        {/* FAQ Cards */}
+        <div className="space-y-6">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-neutral-light p-6 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300"
+            >
+              <h2 className="text-h3 font-heading text-primary-dark mb-3">
+                {faq.question}
+              </h2>
+              <p className="text-base text-neutral-dark/80 leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-16">
+          <p className="text-base text-neutral-dark/70 mb-6">
+            Still have questions? We’re here to help.
+          </p>
+
+          {/* ✅ Use Button Component */}
+          <Button href="/contact" variant="primary">
+            Contact Us
+          </Button>
+        </div>
+      </section>
+    </main>
   );
 };
 

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ---------------------------
-   Global Styles
+   Global Styles (semantic)
 --------------------------- */
 
 /* Root setup for typography and color scheme */
@@ -15,45 +15,76 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Body base styles */
+/* ---------------------------------
+   Base — 60% (Sand Beige background)
+---------------------------------- */
 body {
-  @apply bg-sand-beige text-charcoal font-body leading-relaxed;
+  @apply bg-primary text-secondary-dark font-body leading-relaxed;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
 }
 
-/* Headings */
+/* ---------------------------------
+   Headings — Forest Green for emphasis
+---------------------------------- */
 h1, h2, h3, h4, h5, h6 {
-  @apply font-heading text-forest-green font-bold;
+  @apply font-heading text-primary-dark font-bold;
 }
 
-/* Links */
+/* Maintain clear hierarchy */
+h1 { @apply text-h1; }
+h2 { @apply text-h2; }
+h3 { @apply text-h3; }
+
+/* ---------------------------------
+   Links — 10% accent system
+---------------------------------- */
 a {
-  @apply text-accent-orange font-medium hover:text-orange-600 transition-colors duration-200;
+  @apply text-accent font-medium transition-colors duration-200;
   text-decoration: none;
 }
+a:hover {
+  @apply text-accent-hover underline;
+}
 
-/* Buttons */
+/* ---------------------------------
+   Buttons — accent color CTA
+---------------------------------- */
 button {
-  @apply bg-accent-orange text-white font-semibold rounded-lg px-5 py-2 transition-all duration-300;
+  @apply bg-accent text-neutral-light font-semibold rounded-lg px-6 py-2.5 shadow-soft transition-all duration-300;
 }
 
 button:hover {
-  @apply bg-orange-600 scale-[1.03];
+  @apply bg-accent-hover scale-[1.03] shadow-medium;
 }
 
-/* Containers */
+/* ---------------------------------
+   Containers — centered layout
+---------------------------------- */
 .container {
   @apply max-w-7xl mx-auto px-6;
 }
 
-/* Utility for sections */
+/* ---------------------------------
+   Section utilities
+---------------------------------- */
 .section-padding {
   @apply py-16 md:py-24;
 }
 
-/* Smooth scroll behavior */
+/* Optional: use for subtle layering or contrast */
+.section-light {
+  @apply bg-neutral-light;
+}
+
+.section-accent {
+  @apply bg-primary-light;
+}
+
+/* ---------------------------------
+   Scroll behavior
+---------------------------------- */
 html {
   scroll-behavior: smooth;
 }

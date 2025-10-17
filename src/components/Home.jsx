@@ -1,26 +1,48 @@
+import React from "react";
+import Button from "./Button";
+import heroImage from "../assets/hero image.jpg"; // adjust extension if needed
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-forest-green text-sand-beige text-center px-6">
-      {/* Hero Section */}
-      <h1 className="text-4xl md:text-5xl font-heading mb-4">
-        Adventure begins where the road ends
-      </h1>
-      <p className="text-lg md:text-xl max-w-2xl leading-relaxed mb-8">
-        Discover Kenya’s outdoors with <span className="font-semibold text-accent-orange">John’s Bikes & Tents</span> — your trusted guide for camping, riding, and exploring nature the way it was meant to be: wild, free, and unforgettable.
-      </p>
+    <section className="relative flex flex-col items-center justify-center h-screen text-center text-neutral-light overflow-hidden">
+      {/* Hero Background Image */}
+      <img
+        src={heroImage}
+        alt="Cyclist exploring Naivasha trails"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-      {/* CTA Button */}
-      <a
-        href="/contact"
-        className="px-8 py-3 bg-accent-orange text-white rounded-xl font-semibold hover:bg-orange-700 transition-all duration-300"
-      >
-        Get in Touch
-      </a>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-primary-dark/70 mix-blend-multiply"></div>
+
+      {/* Content */}
+      <div className="relative z-10 px-6 max-w-3xl">
+        <h1 className="text-h1 font-heading text-neutral-light mb-6 drop-shadow-lg">
+          Adventure begins where the road ends
+        </h1>
+
+        <p className="text-base md:text-lg leading-relaxed mb-10 text-neutral-light/90">
+          Discover Kenya’s outdoors with{" "}
+          <span className="font-semibold text-accent">
+            John’s Bikes & Tents
+          </span>{" "}
+          — your trusted guide for camping, riding, and exploring nature the way
+          it was meant to be: wild, free, and unforgettable.
+        </p>
+
+        {/* ✅ Reusable Button Component */}
+        <Button href="/contact" variant="primary">
+          Get in Touch
+        </Button>
+      </div>
 
       {/* Subtext */}
-      <p className="mt-10 text-sm text-sand-beige/80">
+      <p className="relative z-10 mt-10 text-small text-neutral-light/80">
         Based in Naivasha • Near Hell’s Gate National Park
       </p>
-    </div>
+
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-primary-dark/80 to-transparent"></div>
+    </section>
   );
 }
