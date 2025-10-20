@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = ({ children, href, variant = "primary", onClick }) => {
   const base =
-    "inline-block font-semibold rounded-xl transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "inline-block font-semibold rounded-xl transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 no-underline";
 
   const variants = {
     primary:
@@ -13,18 +13,18 @@ const Button = ({ children, href, variant = "primary", onClick }) => {
       "border-2 border-accent text-accent px-6 py-2 hover:bg-accent hover:text-white hover:scale-[1.02]",
   };
 
-  const classNames = `${base} ${variants[variant]}`;
+  const classNames = `${base} ${variants[variant]} no-underline`;
 
   if (href) {
     return (
-      <a href={href} className={classNames}>
+      <a href={href} className={classNames} style={{ textDecoration: "none" }}>
         {children}
       </a>
     );
   }
 
   return (
-    <button onClick={onClick} className={classNames}>
+    <button onClick={onClick} className={classNames} style={{ textDecoration: "none" }}>
       {children}
     </button>
   );

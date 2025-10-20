@@ -10,7 +10,8 @@ const Header = () => {
         {/* Logo / Brand Name */}
         <Link
           to="/"
-          className="text-2xl font-heading font-bold tracking-tight text-neutral-light hover:text-accent transition-colors duration-300"
+          className="text-2xl font-heading font-bold tracking-tight text-neutral-light hover:text-accent transition-colors duration-300 no-underline"
+          style={{ textDecoration: "none" }}
         >
           John’s Bikes & Tents
         </Link>
@@ -19,19 +20,20 @@ const Header = () => {
         <nav>
           <ul className="flex space-x-6 text-sm md:text-base font-medium">
             {[
-              { name: "Home", path: "/" },
               { name: "About", path: "/about" },
-              { name: "Contact", path: "/contact" },
+              { name: "Gallery", path: "/gallery" },
               { name: "FAQ", path: "/faq" },
+              { name: "Contact", path: "/contact" },
             ].map((item) => (
               <li key={item.path}>
                 <Link
                   to={item.path}
-                  className={`relative transition-all duration-300 ${
+                  className={`relative transition-all duration-300 no-underline ${
                     location.pathname === item.path
                       ? "text-accent font-semibold after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-accent"
                       : "text-neutral-light hover:text-accent"
                   }`}
+                  style={{ textDecoration: "none" }}
                 >
                   {item.name}
                 </Link>

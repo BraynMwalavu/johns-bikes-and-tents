@@ -6,28 +6,36 @@ import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
 import FAQ from "./FAQ";
+import Gallery from "./Gallery";
+import WhatsAppButton from "./WhatsAppButton"; // ✅ Import the WhatsApp Button
 
 function Layout() {
   const location = useLocation();
-  const isHome = location.pathname === "/"; // ✅ Check if current route is Home
+
+  // Detect Home route
+  const isHome = location.pathname === "/";
 
   return (
     <>
       {/* ✅ Header always visible */}
       <Header />
 
-      {/* ✅ Main content area — now light beige with dark text */}
+      {/* ✅ Main content area — unified design */}
       <main className="min-h-screen bg-primary text-neutral-dark">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
 
-      {/* ✅ Footer only on non-home pages */}
+      {/* ✅ Footer hidden only on Home page */}
       {!isHome && <Footer />}
+
+      {/* ✅ Floating WhatsApp button (always visible) */}
+      <WhatsAppButton />
     </>
   );
 }
