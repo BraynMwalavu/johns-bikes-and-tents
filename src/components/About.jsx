@@ -26,7 +26,7 @@ const About = () => {
             Our Story
           </h2>
           <p className="text-base leading-relaxed mb-4">
-            Founded by outdoor enthusiast <span className="text-accent font-semibold">John Mwangi</span> in 2018,
+            Founded by outdoor enthusiast <span className="text-accent font-semibold">John Gachucha</span> in 2018,
             John’s Bikes & Tents began as a small local shop in Naivasha catering to
             adventure seekers exploring Hell’s Gate National Park. Over the years, we’ve
             grown into a trusted name for quality bikes, tents, and guided adventure rentals.
@@ -41,7 +41,7 @@ const About = () => {
         {/* Image */}
         <img
           src={johnWithTourist}
-          alt="John Mwangi with a tourist in Naivasha"
+          alt="John Gachucha with a tourist in Naivasha"
           loading="lazy"
           className="rounded-2xl shadow-medium object-cover w-full h-80 md:h-96 transform hover:scale-[1.02] transition-transform duration-300"
         />
@@ -120,7 +120,7 @@ const About = () => {
               📍 Location
             </h3>
             <p className="text-base text-neutral-dark/80">
-              Fisherman’s Camp, Naivasha — right next to Hell’s Gate National Park
+              Fisherman’s Camp, Naivasha — near Hell’s Gate National Park
             </p>
           </div>
         </div>
