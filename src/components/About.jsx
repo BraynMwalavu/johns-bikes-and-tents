@@ -26,7 +26,7 @@ const About = () => {
             Our Story
           </h2>
           <p className="text-base leading-relaxed mb-4">
-            Founded by outdoor enthusiast <span className="text-accent font-semibold">John Mwangi</span> in 2018,
+            Founded by outdoor enthusiast <span className="text-accent font-semibold">John Gachucha</span> in 2018,
             John’s Bikes & Tents began as a small local shop in Naivasha catering to
             adventure seekers exploring Hell’s Gate National Park. Over the years, we’ve
             grown into a trusted name for quality bikes, tents, and guided adventure rentals.
