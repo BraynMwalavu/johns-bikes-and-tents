@@ -4,125 +4,156 @@ import johnWithTourist from "../assets/John with tourist.jpg";
 const About = () => {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-primary text-neutral-dark py-20">
+      {/* =======================
+          HERO SECTION
+      ========================== */}
+      <section className="bg-primary text-neutral-light py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-h1 font-heading text-primary-dark mb-6">
+          <h1 className="text-h1 font-heading text-primary-dark mb-4">
             About John’s Bikes & Tents
           </h1>
-          <p className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            We’re passionate about helping adventurers explore the wild with confidence.
-            From rugged bikes to durable camping gear, our mission is to make your
-            journey <span className="text-accent font-semibold">unforgettable.</span>
+
+          <p className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed text-neutral-dark/90">
+            Since 2016, we’ve helped adventurers explore Naivasha and Hell’s Gate 
+            with confidence — offering trusted gear, friendly guidance, and unforgettable outdoor experiences.
           </p>
         </div>
       </section>
 
-      {/* Story / Mission Section */}
-      <section className="bg-neutral-light text-neutral-dark max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-        {/* Text Content */}
-        <div>
-          <h2 className="text-h2 font-heading text-primary-dark mb-4">
-            Our Story
-          </h2>
-          <p className="text-base leading-relaxed mb-4">
-            Founded by outdoor enthusiast <span className="text-accent font-semibold">John Gachucha</span> in 2018,
-            John’s Bikes & Tents began as a small local shop in Naivasha catering to
-            adventure seekers exploring Hell’s Gate National Park. Over the years, we’ve
-            grown into a trusted name for quality bikes, tents, and guided adventure rentals.
-          </p>
-          <p className="text-base leading-relaxed">
-            We believe every trip should be memorable — that’s why we provide reliable
-            equipment and personalized recommendations tailored to your experience level
-            and adventure goals.
-          </p>
-        </div>
+      {/* =======================
+          OUR STORY
+      ========================== */}
+      <section className="bg-neutral-light py-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center">
 
-        {/* Image */}
-        <img
-          src={johnWithTourist}
-          alt="John Mwangi with a tourist in Naivasha"
-          loading="lazy"
-          className="rounded-2xl shadow-medium object-cover w-full h-80 md:h-96 transform hover:scale-[1.02] transition-transform duration-300"
-        />
-      </section>
+          {/* Text Content */}
+          <div>
+            <h2 className="text-h2 font-heading text-primary-dark mb-4">
+              Our Story
+            </h2>
 
-      {/* ✅ Services Section */}
-      <section className="bg-primary-light py-20 text-neutral-dark">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-h2 font-heading text-primary-dark mb-10">
-            Our Services
-          </h2>
+            <p className="text-base leading-relaxed text-neutral-dark/90 mb-4">
+              John’s Bikes & Tents began in 2016 when
+              <span className="text-accent font-semibold"> John Gachucha</span>, an avid explorer 
+              with an unmatched passion for outdoor experiences, started with a single bicycle 
+              and a vision — to help visitors discover the beauty of Naivasha in a genuine, memorable way.
+            </p>
 
-          <div className="grid md:grid-cols-3 gap-8 text-left">
-            {/* Service 1: Bike Rentals */}
-            <div className="bg-neutral-light shadow-soft rounded-2xl p-6 hover:shadow-medium transition">
-              <h3 className="font-heading text-xl mb-3 text-primary-dark">
-                🚲 Bike Rentals
-              </h3>
-              <p className="text-base text-neutral-dark/80 mb-3">
-                Explore Naivasha and Hell’s Gate National Park with our top-quality bikes.
-              </p>
-              <ul className="text-sm text-neutral-dark/80 leading-relaxed">
-                <li><strong>Rate:</strong> 800 Ksh per day</li>
-                <li><strong>Helmets:</strong> 200 Ksh</li>
-              </ul>
+            <p className="text-base leading-relaxed text-neutral-dark/90 mb-4">
+              Over the years, that small idea has grown into a trusted service recognized by both 
+              local and international tourists. John's warm hospitality, professionalism, and 
+              deep knowledge of local trails have created an experience that visitors consistently return for.
+            </p>
 
-              <h4 className="font-semibold text-primary-dark mt-4 mb-2">Bike Sizes:</h4>
-              <ul className="text-sm text-neutral-dark/80 space-y-1">
-                <li>20” — Ages 6–7</li>
-                <li>24” — Ages 8–10</li>
-                <li>26” — Ages 11–15</li>
-                <li>29” — Ages 16 and above</li>
-              </ul>
-            </div>
-
-            {/* Service 2: Tents & Camping Gear */}
-            <div className="bg-neutral-light shadow-soft rounded-2xl p-6 hover:shadow-medium transition">
-              <h3 className="font-heading text-xl mb-3 text-primary-dark">
-                ⛺ Tent Rentals
-              </h3>
-              <p className="text-base text-neutral-dark/80 mb-3">
-                Stay comfortable under the stars with a variety of tent sizes.
-              </p>
-              <ul className="text-sm text-neutral-dark/80 leading-relaxed">
-                <li>2-man tent</li>
-                <li>3-man tent</li>
-                <li>4-man tent</li>
-                <li>8-man tent</li>
-                <li>10-man tent</li>
-              </ul>
-              <p className="mt-3 text-sm text-neutral-dark/70">
-                Available in small, medium, and large sizes — ideal for groups or solo travelers.
-              </p>
-            </div>
-
-            {/* Service 3: Boat Riding */}
-            <div className="bg-neutral-light shadow-soft rounded-2xl p-6 hover:shadow-medium transition">
-              <h3 className="font-heading text-xl mb-3 text-primary-dark">
-                🚤 Boat Riding
-              </h3>
-              <p className="text-base text-neutral-dark/80 mb-3">
-                Enjoy breathtaking lake views and wildlife experiences on the water.
-              </p>
-              <ul className="text-sm text-neutral-dark/80 leading-relaxed">
-                <li><strong>1 Hour Ride:</strong> 3,500 Ksh</li>
-              </ul>
-              <p className="mt-3 text-sm text-neutral-dark/70">
-                Perfect for sightseeing, photography, or simply relaxing by Lake Naivasha.
-              </p>
-            </div>
-          </div>
-
-          {/* Location Info */}
-          <div className="mt-16 text-center">
-            <h3 className="text-lg font-heading text-primary-dark mb-2">
-              📍 Location
-            </h3>
-            <p className="text-base text-neutral-dark/80">
-              Fisherman’s Camp, Naivasha — right next to Hell’s Gate National Park
+            <p className="text-base leading-relaxed text-neutral-dark/90">
+              Today, we continue to provide high-quality bikes, tents, and guided adventures — 
+              all tailored to make every journey safe, exciting, and truly unforgettable.
             </p>
           </div>
+
+          {/* Image */}
+          <img
+            src={johnWithTourist}
+            alt="Founder John Gachucha with a tourist in Naivasha"
+            loading="lazy"
+            className="rounded-2xl shadow-medium object-cover w-full h-80 md:h-96 hover:scale-[1.02] transition duration-300"
+          />
+        </div>
+      </section>
+
+      {/* =======================
+          MISSION SECTION
+      ========================== */}
+      <section className="bg-primary-light py-20">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-h2 font-heading text-primary-dark mb-6">
+            Our Mission
+          </h2>
+
+        <p className="text-base md:text-lg leading-relaxed text-neutral-dark/90 max-w-3xl mx-auto">
+          To make outdoor exploration accessible, safe, and deeply enjoyable by offering 
+          dependable equipment, genuine guidance, and exceptional service that helps every 
+          adventurer connect with nature confidently.
+        </p>
+        </div>
+      </section>
+
+      {/* =======================
+          VALUES SECTION
+      ========================== */}
+      <section className="bg-neutral-light py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-h2 font-heading text-primary-dark mb-10">
+            Our Values
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+
+            {/* Value 1 */}
+            <div className="p-6 bg-white rounded-xl shadow-soft">
+              <h3 className="font-heading text-lg mb-2 text-primary-dark">Reliability</h3>
+              <p className="text-neutral-dark/80 text-sm">
+                Our gear is carefully maintained and tested for real outdoor conditions — ensuring 
+                comfort and safety in every adventure.
+              </p>
+            </div>
+
+            {/* Value 2 */}
+            <div className="p-6 bg-white rounded-xl shadow-soft">
+              <h3 className="font-heading text-lg mb-2 text-primary-dark">Genuine Hospitality</h3>
+              <p className="text-neutral-dark/80 text-sm">
+                We serve every customer with kindness, honesty, and personalized care.
+              </p>
+            </div>
+
+            {/* Value 3 */}
+            <div className="p-6 bg-white rounded-xl shadow-soft">
+              <h3 className="font-heading text-lg mb-2 text-primary-dark">Adventure for Everyone</h3>
+              <p className="text-neutral-dark/80 text-sm">
+                Whether you’re a first-time rider or an experienced explorer, we ensure your journey is enjoyable.
+              </p>
+            </div>
+
+            {/* Value 4 */}
+            <div className="p-6 bg-white rounded-xl shadow-soft">
+              <h3 className="font-heading text-lg mb-2 text-primary-dark">Professionalism</h3>
+              <p className="text-neutral-dark/80 text-sm">
+                Clear communication, transparent pricing, and dependable service — always.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* =======================
+          FOUNDER SECTION
+      ========================== */}
+      <section className="bg-primary text-neutral-light py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-h2 font-heading text-primary-dark mb-4">
+            Meet the Founder
+          </h2>
+
+          <p className="max-w-3xl mx-auto text-neutral-dark/90 text-base md:text-lg leading-relaxed">
+            John is the heart of this business — charismatic, hardworking, and deeply passionate 
+            about helping visitors enjoy Naivasha to the fullest. His professionalism and 
+            personal touch set the service apart, creating an experience guests always remember.
+          </p>
+        </div>
+      </section>
+
+      {/* =======================
+          LOCATION SECTION
+      ========================== */}
+      <section className="bg-neutral-light py-16">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h3 className="text-lg font-heading text-primary-dark mb-2">
+            📍 Location
+          </h3>
+          <p className="text-base text-neutral-dark/80">
+            Fisherman’s Camp, Naivasha — right next to Hell’s Gate National Park.
+          </p>
         </div>
       </section>
     </>
